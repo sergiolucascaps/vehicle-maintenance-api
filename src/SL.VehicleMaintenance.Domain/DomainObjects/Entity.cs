@@ -5,11 +5,19 @@
 		public Guid Id { get; set; }
 		public DateTime CreatedDate { get; set; }
 		public DateTime? UpdatedDate { get; set; }
+		public bool IsActive { get; set; }
+		public bool IsDeleted { get; set; }
 
 		protected Entity()
 		{
 			Id = Guid.NewGuid();
+			CreatedDate = DateTime.Now;
 		}
+
+		public void Active() => IsActive = true;
+		public void Deactive() => IsActive = false;
+		public void Delete() => IsDeleted = true;
+		public void Undelete() => IsDeleted = false;
 
 		public override bool Equals(object? obj)
 		{
