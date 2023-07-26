@@ -8,16 +8,16 @@ namespace SL.VehicleMaintenance.Domain.Models
 
 		public ICollection<PhoneModel> Phones { get; set; }
 		public ICollection<EmailModel> Emails { get; set; }
-		public ICollection<VehicleModel> Vehicles { get; set; }
+		public ICollection<UserVehicleModel> Vehicles { get; set; }
 
 		protected UserModel() 
 		{
 			Phones = new List<PhoneModel>();
 			Emails = new List<EmailModel>();
-			Vehicles = new List<VehicleModel>();
+			Vehicles = new List<UserVehicleModel>();
 		}
 
-		public UserModel(string name, ICollection<PhoneModel> phones, ICollection<EmailModel> emails, ICollection<VehicleModel> vehicles)
+		public UserModel(string name, ICollection<PhoneModel> phones, ICollection<EmailModel> emails, ICollection<UserVehicleModel> vehicles)
 		{
 			Name = name;
 			Phones = phones;
