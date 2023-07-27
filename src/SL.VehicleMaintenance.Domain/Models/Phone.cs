@@ -3,23 +3,23 @@ using SL.VehicleMaintenance.Domain.DomainObjects.Enumerators;
 
 namespace SL.VehicleMaintenance.Domain.Models
 {
-	public class EmailModel : Entity
+	public class Phone : Entity
 	{
-		public required string Email { get; set; }
+		public required string Number { get; set; }
 		public string? Description { get; set; }
-		public EmailTypeEnumModel EmailType { get; set; }
+		public PhoneTypeEnumModel PhoneType { get; set; }
 		public bool IsMain { get; set; }
 
 		public Guid UserId { get; set; }
-		public required UserModel User { get; set; }
+		public required User User { get; set; }
 
-		protected EmailModel() { }
+		protected Phone() { }
 
-		public EmailModel(string email, string description, EmailTypeEnumModel emailType, bool isMain, Guid userId, UserModel user)
+		public Phone(string number, string description, PhoneTypeEnumModel phoneType, bool isMain, Guid userId, User user)
 		{
-			Email = email;
+			Number = number;
 			Description = description;
-			EmailType = emailType;
+			PhoneType = phoneType;
 			IsMain = isMain;
 			UserId = userId;
 			User = user;
@@ -29,8 +29,8 @@ namespace SL.VehicleMaintenance.Domain.Models
 
 		public void Validate()
 		{
-			Validations.Required(Email, ($"O campo {nameof(Email)} é obrigatório!"));
-			Validations.MinMaxLength(Email, 8, 150, ($"Tamanho inválido para o campo {nameof(Email)}!"));
+			Validations.Required(Number, ($"O campo {nameof(Number)} é obrigatório!"));
+			Validations.MinMaxLength(Number, 8, 15, ($"Tamanho inválido para o campo {nameof(Number)}!"));
 			Validations.MinMaxLength(Description, 2, 150, ($"Tamanho inválido para o campo {nameof(Description)}!"));
 			Validations.IsEquals(UserId, Guid.NewGuid(), ($"Valor inválido para o campo {nameof(UserId)}!"));
 		}
