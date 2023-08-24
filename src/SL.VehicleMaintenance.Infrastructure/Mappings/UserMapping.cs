@@ -8,32 +8,32 @@ namespace SL.VehicleMaintenance.Infrastructure.Mappings
 	{
 		public void Configure(EntityTypeBuilder<User> builder)
 		{
-			builder.HasKey(c => c.Id);
+			builder.HasKey(x => x.Id);
 
-			builder.Property(c => c.CreatedDate)
+			builder.Property(x => x.CreatedDate)
 				.IsRequired(true);
 
-			builder.Property(c => c.UpdatedDate)
+			builder.Property(x => x.UpdatedDate)
 				.IsRequired(false);
 
-			builder.Property(c => c.IsActive)
+			builder.Property(x => x.IsActive)
 				.IsRequired(true);
 
-			builder.Property(c => c.IsDeleted)
+			builder.Property(x => x.IsDeleted)
 				.IsRequired(true);
 
 			// 1 : N => User : Phones
-			builder.HasMany(c => c.Phones)
+			builder.HasMany(x => x.Phones)
 				.WithOne(p => p.User)
 				.HasForeignKey(p => p.UserId);
 
 			// 1 : N => User : Emails
-			builder.HasMany(c => c.Emails)
+			builder.HasMany(x => x.Emails)
 				.WithOne(p => p.User)
 				.HasForeignKey(p => p.UserId);
 
 			// 1 : N => User : Vehicles
-			builder.HasMany(c => c.Vehicles)
+			builder.HasMany(x => x.Vehicles)
 				.WithOne(p => p.User)
 				.HasForeignKey(p => p.UserId);
 
