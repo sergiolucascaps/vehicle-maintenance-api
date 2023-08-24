@@ -4,9 +4,9 @@ using SL.VehicleMaintenance.Domain.Models;
 
 namespace SL.VehicleMaintenance.Infrastructure.Mappings
 {
-	public class EmailMapping : IEntityTypeConfiguration<Email>
+	public class BrandMapping : IEntityTypeConfiguration<Brand>
 	{
-		public void Configure(EntityTypeBuilder<Email> builder)
+		public void Configure(EntityTypeBuilder<Brand> builder)
 		{
 			builder.HasKey(x => x.Id);
 
@@ -22,27 +22,18 @@ namespace SL.VehicleMaintenance.Infrastructure.Mappings
 			builder.Property(x => x.IsDeleted)
 				.IsRequired(true);
 
-			builder.Property(x => x.EmailAddress)
+			builder.Property(x => x.Name)
 				.IsRequired(true)
-				.HasColumnType("VARCHAR(250)");
-
-			builder.Property(x => x.Description)
-				.IsRequired(false)
 				.HasColumnType("VARCHAR(75)");
 
-			builder.Property(x => x.EmailType)
-				.IsRequired(true)
-				.HasColumnType("TINYINT"); // 0-255 CHARACTERS
+			builder.Property(x => x.Image)
+				.IsRequired(false);
 
-			builder.Property(x => x.IsMain)
-				.IsRequired(true);
+			builder
+				.HasMany(x => x.VehicleModels)
+				.WithOne(x => x.Brand);
 
-			builder.Property(x => x.UserId)
-				.IsRequired(true);
-
-			builder.HasOne(x => x.User);
-
-			builder.ToTable("Emails");
+			builder.ToTable("Brands");
 		}
 	}
 }

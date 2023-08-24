@@ -4,9 +4,9 @@ using SL.VehicleMaintenance.Domain.Models;
 
 namespace SL.VehicleMaintenance.Infrastructure.Mappings
 {
-	public class EmailMapping : IEntityTypeConfiguration<Email>
+	public class VehicleModelMapping : IEntityTypeConfiguration<VehicleModel>
 	{
-		public void Configure(EntityTypeBuilder<Email> builder)
+		public void Configure(EntityTypeBuilder<VehicleModel> builder)
 		{
 			builder.HasKey(x => x.Id);
 
@@ -22,27 +22,26 @@ namespace SL.VehicleMaintenance.Infrastructure.Mappings
 			builder.Property(x => x.IsDeleted)
 				.IsRequired(true);
 
-			builder.Property(x => x.EmailAddress)
+			builder.Property(x => x.Name)
 				.IsRequired(true)
-				.HasColumnType("VARCHAR(250)");
-
-			builder.Property(x => x.Description)
-				.IsRequired(false)
 				.HasColumnType("VARCHAR(75)");
 
-			builder.Property(x => x.EmailType)
-				.IsRequired(true)
-				.HasColumnType("TINYINT"); // 0-255 CHARACTERS
-
-			builder.Property(x => x.IsMain)
+			builder.Property(x => x.YearOfManufacture)
 				.IsRequired(true);
 
-			builder.Property(x => x.UserId)
+			builder.Property(x => x.ModelYear)
 				.IsRequired(true);
 
-			builder.HasOne(x => x.User);
+			builder.Property(x => x.BrandId)
+				.IsRequired(true);
 
-			builder.ToTable("Emails");
+			builder.HasOne(x => x.Brand);
+
+			builder
+				.HasMany(x => x.UserVehicles)
+				.WithOne(x => x.Model);
+
+			builder.ToTable("VehicleModels");
 		}
 	}
 }

@@ -9,6 +9,12 @@ namespace SL.VehicleMaintenance.Domain.Models
 		public int ModelYear { get; set; } // Ano do modelo
 		public Guid BrandId { get; set; }
 
+		public ICollection<UserVehicle> UserVehicles { get; set; }
 		public required Brand Brand { get; set; }
+
+		public VehicleModel()
+		{
+			UserVehicles = new List<UserVehicle>();
+		}
 	}
 }
