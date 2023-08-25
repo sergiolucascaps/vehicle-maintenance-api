@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SL.VehicleMaintenance.Domain.Models;
 
-namespace SL.VehicleMaintenance.Infrastructure.Mappings
+namespace SL.VehicleMaintenance.Infrastructure.Data.Mappings
 {
 	public class UserVehicleMapping : IEntityTypeConfiguration<UserVehicle>
 	{
