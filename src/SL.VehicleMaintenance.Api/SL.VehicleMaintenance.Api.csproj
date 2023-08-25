@@ -15,4 +15,8 @@
     <Folder Include="Controllers\V1\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SL.VehicleMaintenance.Infrastructure.CrossCutting\SL.VehicleMaintenance.Infrastructure.CrossCutting.csproj" />
+  </ItemGroup>
+
 </Project>
