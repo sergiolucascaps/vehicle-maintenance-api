@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SL.VehicleMaintenance.Infrastructure.Data.Context;
 
 namespace SL.VehicleMaintenance.Infrastructure.CrossCutting
 {
@@ -9,27 +11,32 @@ namespace SL.VehicleMaintenance.Infrastructure.CrossCutting
 			RegisterAppServices(services);
 			RegisterDomainServices(services);
 			RegisterRepositories(services);
-			RegisterSqlServerContext(services);
 		}
 
-		private static void RegisterAppServices(IServiceCollection container)
+		private static void RegisterAppServices(IServiceCollection services)
 		{
 			throw new NotImplementedException();
 		}
 
-		private static void RegisterDomainServices(IServiceCollection container)
+		private static void RegisterDomainServices(IServiceCollection services)
 		{
 			throw new NotImplementedException();
 		}
 
-		private static void RegisterRepositories(IServiceCollection container)
+		private static void RegisterRepositories(IServiceCollection services)
 		{
 			throw new NotImplementedException();
 		}
 
-		private static void RegisterSqlServerContext(IServiceCollection container)
+		public static void RegisterAppDbContext(this IServiceCollection services, string? connection)
 		{
-			throw new NotImplementedException();
+			if (!string.IsNullOrWhiteSpace(connection))
+			{
+				services.AddDbContext<VehicleMaintenanceSqlContext>(options =>
+				{
+					options.UseSqlServer(connection);
+				});
+			}
 		}
 	}
 }

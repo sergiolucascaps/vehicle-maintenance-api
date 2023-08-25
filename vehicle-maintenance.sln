@@ -23,9 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SL.VehicleMaintenance.Domai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SL.VehicleMaintenance.Domain.Tests", "tests\SL.VehicleMaintenance.Domain.Tests\SL.VehicleMaintenance.Domain.Tests.csproj", "{59960314-DD16-4E15-A50D-A021ACFF549B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SL.VehicleMaintenance.Infrastructure", "src\SL.VehicleMaintenance.Infrastructure\SL.VehicleMaintenance.Infrastructure.csproj", "{68E6462E-5ABF-4818-9775-82A92BACA5B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SL.VehicleMaintenance.Infrastructure.Data", "src\SL.VehicleMaintenance.Infrastructure\SL.VehicleMaintenance.Infrastructure.Data.csproj", "{68E6462E-5ABF-4818-9775-82A92BACA5B3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SL.VehicleMaintenance.Infrastructure.Tests", "tests\SL.VehicleMaintenance.Infrastructure.Tests\SL.VehicleMaintenance.Infrastructure.Tests.csproj", "{B22A9886-547E-4089-A3E4-F1C7C7C824B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SL.VehicleMaintenance.Infrastructure.Data.Tests", "tests\SL.VehicleMaintenance.Infrastructure.Tests\SL.VehicleMaintenance.Infrastructure.Data.Tests.csproj", "{B22A9886-547E-4089-A3E4-F1C7C7C824B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8512EB55-8D22-4039-AE3F-27EED6A87FF2}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,9 +36,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{49F983D7-B89D-4B7A-BFA8-FCE1018BBDF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL.VehicleMaintenance.Infrastructure.CrossCutting", "src\SL.VehicleMaintenance.Infrastructure.CrossCutting\SL.VehicleMaintenance.Infrastructure.CrossCutting.csproj", "{E96B37FF-0E23-4CD0-A106-18524DE1DF26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SL.VehicleMaintenance.Infrastructure.CrossCutting", "src\SL.VehicleMaintenance.Infrastructure.CrossCutting\SL.VehicleMaintenance.Infrastructure.CrossCutting.csproj", "{E96B37FF-0E23-4CD0-A106-18524DE1DF26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL.VehicleMaintenance.Infrastructure.CrossCutting.Tests", "tests\SL.VehicleMaintenance.Infrastructure.CrossCutting.Tests\SL.VehicleMaintenance.Infrastructure.CrossCutting.Tests.csproj", "{6047C468-A483-4AD9-8427-B33881C5986B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SL.VehicleMaintenance.Infrastructure.CrossCutting.Tests", "tests\SL.VehicleMaintenance.Infrastructure.CrossCutting.Tests\SL.VehicleMaintenance.Infrastructure.CrossCutting.Tests.csproj", "{6047C468-A483-4AD9-8427-B33881C5986B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
