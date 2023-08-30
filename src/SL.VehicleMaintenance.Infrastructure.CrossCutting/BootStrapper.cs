@@ -15,17 +15,17 @@ namespace SL.VehicleMaintenance.Infrastructure.CrossCutting
 
 		private static void RegisterAppServices(IServiceCollection services)
 		{
-			throw new NotImplementedException();
+			// TODO: @sergiolucascaps - Register Here the AppServices
 		}
 
 		private static void RegisterDomainServices(IServiceCollection services)
 		{
-			throw new NotImplementedException();
+			// TODO: @sergiolucascaps - Register Here the DomainServices
 		}
 
 		private static void RegisterRepositories(IServiceCollection services)
 		{
-			throw new NotImplementedException();
+			// TODO: @sergiolucascaps - Register Here the repositories
 		}
 
 		public static void RegisterAppDbContext(this IServiceCollection services, string? connection)
