@@ -10,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 // register DI
 builder.Services.RegisterServices();
-builder.Services.RegisterAppDbContext(connection: builder.Configuration.GetConnectionString("DefaultConnection"));
+builder.Services.RegisterAppDbContext(connection: builder.Configuration.GetConnectionString("VehicleMaintenanceConnection"));
 
 builder.Services.AddSwaggerGen();
 
