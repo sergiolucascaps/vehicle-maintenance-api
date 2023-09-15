@@ -22,6 +22,11 @@ namespace SL.VehicleMaintenance.Infrastructure.Data.Mappings
 			builder.Property(x => x.IsDeleted)
 				.IsRequired(true);
 
+			builder.Property(x => x.Name)
+				.IsRequired(true)
+				.HasMaxLength(75)
+				.HasColumnType("VARCHAR");
+
 			// 1 : N => User : Phones
 			builder.HasMany(x => x.Phones)
 				.WithOne(p => p.User)
