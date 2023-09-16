@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SL.VehicleMaintenance.Domain.DomainObjects;
-using SL.VehicleMaintenance.Domain.Interfaces;
+using SL.VehicleMaintenance.Domain.Interfaces.Repositories;
 using SL.VehicleMaintenance.Infrastructure.Data.Context;
 using System.Linq.Expressions;
 

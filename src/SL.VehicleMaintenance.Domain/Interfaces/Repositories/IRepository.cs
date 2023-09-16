@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace SL.VehicleMaintenance.Domain.Interfaces
+namespace SL.VehicleMaintenance.Domain.Interfaces.Repositories
 {
 	public interface IRepository<TEntity> : IDisposable
 	{

@@ -1,4 +1,4 @@
-using SL.VehicleMaintenance.Domain.Interfaces;
+using SL.VehicleMaintenance.Domain.Interfaces.Repositories;
 using SL.VehicleMaintenance.Domain.Models;
 using SL.VehicleMaintenance.Infrastructure.Data.Context;
 

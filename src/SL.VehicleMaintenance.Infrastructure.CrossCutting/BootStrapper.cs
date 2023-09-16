@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using SL.VehicleMaintenance.Domain.Interfaces;
+using SL.VehicleMaintenance.Domain.Interfaces.Repositories;
 using SL.VehicleMaintenance.Infrastructure.Data.Context;
 using SL.VehicleMaintenance.Infrastructure.Data.Repositories;
 
