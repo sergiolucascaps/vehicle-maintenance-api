@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SL.VehicleMaintenance.Domain.Interfaces.Repositories;
+using SL.VehicleMaintenance.Domain.Interfaces.Services;
+using SL.VehicleMaintenance.Domain.Services;
 using SL.VehicleMaintenance.Infrastructure.Data.Context;
 using SL.VehicleMaintenance.Infrastructure.Data.Repositories;
 
@@ -22,7 +24,7 @@ namespace SL.VehicleMaintenance.Infrastructure.CrossCutting
 
 		private static void RegisterDomainServices(IServiceCollection services)
 		{
-			// TODO: @sergiolucascaps - Register Here the DomainServices
+			services.AddScoped<IBrandService, BrandService>();
 		}
 
 		private static void RegisterRepositories(IServiceCollection services)
