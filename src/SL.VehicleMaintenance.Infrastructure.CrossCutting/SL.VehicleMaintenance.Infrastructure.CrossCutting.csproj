@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SL.VehicleMaintenance.Infrastructure\SL.VehicleMaintenance.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\SL.VehicleMaintenance.Domain\SL.VehicleMaintenance.Domain.csproj" />
+    <ProjectReference Include="..\SL.VehicleMaintenance.Application\SL.VehicleMaintenance.Application.csproj" />
   </ItemGroup>
 
 </Project>

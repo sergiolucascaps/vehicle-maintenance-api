@@ -5,6 +5,8 @@ using SL.VehicleMaintenance.Domain.Interfaces.Services;
 using SL.VehicleMaintenance.Domain.Services;
 using SL.VehicleMaintenance.Infrastructure.Data.Context;
 using SL.VehicleMaintenance.Infrastructure.Data.Repositories;
+using SL.VehicleMaintenance.Application.Interfaces;
+using SL.VehicleMaintenance.Application.Services;
 
 namespace SL.VehicleMaintenance.Infrastructure.CrossCutting
 {
@@ -19,7 +21,7 @@ namespace SL.VehicleMaintenance.Infrastructure.CrossCutting
 
 		private static void RegisterAppServices(IServiceCollection services)
 		{
-			// TODO: @sergiolucascaps - Register Here the AppServices
+			services.AddScoped<IBrandAppService, BrandAppService>();
 		}
 
 		private static void RegisterDomainServices(IServiceCollection services)
