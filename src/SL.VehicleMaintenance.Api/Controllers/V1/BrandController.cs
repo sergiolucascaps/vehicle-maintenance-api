@@ -17,14 +17,10 @@ namespace SL.VehicleMaintenance.Api.Controllers.V1
 
 		[HttpGet("get-all")]
 		public async Task<IActionResult> GetAll()
-		{
-			throw new NotImplementedException();
-		}
+			=> Ok(await _brandAppService.GetAllBrands());
 
 		[HttpGet("get-by-id")]
-		public async Task<IActionResult> GetById()
-		{
-			throw new NotImplementedException();
-		}
+		public async Task<IActionResult> GetById(Guid id)
+			=> Ok(await _brandAppService.GetById(id));
 	}
 }
