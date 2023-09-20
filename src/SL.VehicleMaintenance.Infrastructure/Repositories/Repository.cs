@@ -60,7 +60,7 @@ namespace SL.VehicleMaintenance.Infrastructure.Data.Repositories
 			}
         }
 
-        // public int SaveChanges() => Db.SaveChanges();
+        public int SaveChanges() => Db.SaveChanges();
 
         public void Dispose()
         {

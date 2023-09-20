@@ -6,5 +6,6 @@ namespace SL.VehicleMaintenance.Application.Interfaces
 	{
 		Task<ICollection<BrandViewModel>> GetAllBrands();
 		Task<BrandViewModel> GetById(Guid id);
+		Task<BrandViewModel?> Create(BrandViewModel brand);
 	}
 }

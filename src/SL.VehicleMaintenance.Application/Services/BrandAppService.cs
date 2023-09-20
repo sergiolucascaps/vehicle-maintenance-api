@@ -3,6 +3,7 @@ using SL.VehicleMaintenance.Domain.Interfaces.Repositories;
 using SL.VehicleMaintenance.Domain.Interfaces.Services;
 using SL.VehicleMaintenance.Application.ViewModels;
 using AutoMapper;
+using SL.VehicleMaintenance.Domain.Models;
 
 namespace SL.VehicleMaintenance.Application.Services
 {
@@ -18,6 +19,15 @@ namespace SL.VehicleMaintenance.Application.Services
 		{
 			_brandService = brandService;
 			_brandRepository = brandRepository;
+		}
+
+		public async Task<BrandViewModel?> Create(BrandViewModel brand)
+		{
+			var created = await _brandService.Create(_mapper.Map<Brand>(brand));
+
+			if(created is not null) return _mapper.Map<BrandViewModel>(created);
+
+			return null;
 		}
 
 		public async Task<ICollection<BrandViewModel>> GetAllBrands()

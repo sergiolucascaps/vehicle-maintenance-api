@@ -11,6 +11,11 @@ builder.Services.AddEndpointsApiExplorer();
 // register DI
 builder.Services.RegisterServices();
 
+// AutoMapper
+builder.Services.AddAutoMapper(cfg => {
+	cfg.AddProfile(new SL.VehicleMaintenance.Infrastructure.CrossCutting.AutoMapperProfiles.AutoMapper());
+});
+
 builder.Services.RegisterAppDbContext(connection: builder.Configuration.GetConnectionString("VehicleMaintenanceConnection"));
 
 builder.Services.AddSwaggerGen();

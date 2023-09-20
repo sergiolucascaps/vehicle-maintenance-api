@@ -10,5 +10,6 @@ namespace SL.VehicleMaintenance.Domain.Interfaces.Repositories
 		Task<TEntity?> GetById(Guid id);
 		Task<IEnumerable<TEntity>> ListAll();
 		Task Remove(Guid id);
+		int SaveChanges();
 	}
 }

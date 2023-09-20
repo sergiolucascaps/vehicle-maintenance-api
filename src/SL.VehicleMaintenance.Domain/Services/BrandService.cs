@@ -12,5 +12,13 @@ namespace SL.VehicleMaintenance.Domain.Services
 		{
 			_brandRepository = brandRepository;
 		}
+
+		public async Task<Brand?> Create(Brand brand)
+		{
+			// TODO: @sergiolucascaps - Implement Domain Validations
+			var created = await _brandRepository.Create(brand);
+
+			return _brandRepository.SaveChanges() > 0 ? created : null;
+		}
 	}
 }

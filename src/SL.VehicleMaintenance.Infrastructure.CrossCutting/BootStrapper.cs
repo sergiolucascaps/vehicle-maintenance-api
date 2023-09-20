@@ -17,14 +17,6 @@ namespace SL.VehicleMaintenance.Infrastructure.CrossCutting
 			RegisterAppServices(services);
 			RegisterDomainServices(services);
 			RegisterRepositories(services);
-			RegisterAutoMapper(services);
-		}
-
-		private static void RegisterAutoMapper(IServiceCollection services)
-		{
-			// TODO: @sergiolucascaps - Implementar
-			throw new NotImplementedException();
-			// services.AddAutoMapper()
 		}
 
 		private static void RegisterAppServices(IServiceCollection services)
