@@ -33,7 +33,10 @@ namespace SL.VehicleMaintenance.Infrastructure.Data.Repositories
         }
 
         public async Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate)
-		=> await DbSet.AsNoTracking().Where(predicate).ToListAsync();
+			=> await DbSet.AsNoTracking().Where(predicate).ToListAsync();
+
+		public async Task<bool> AnyAsync(Expression<Func<TEntity, bool>> predicate)
+			=> await DbSet.AsNoTracking().AnyAsync(predicate);
 
         // public async Task<IEnumerable<TEntity>> Find(ISpecificationFilter<IDictionary<string, object>> predicate, params Expression<Func<TEntity, object>>[] includes) =>
         //     await DbSet
