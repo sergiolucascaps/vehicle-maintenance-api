@@ -4,6 +4,7 @@ using SL.VehicleMaintenance.Domain.Interfaces.Services;
 using SL.VehicleMaintenance.Application.ViewModels;
 using AutoMapper;
 using SL.VehicleMaintenance.Domain.Models;
+using SL.VehicleMaintenance.Application.ViewModels.Grids;
 
 namespace SL.VehicleMaintenance.Application.Services
 {
@@ -42,13 +43,13 @@ namespace SL.VehicleMaintenance.Application.Services
 			return null;
 		}
 
-		public async Task<ICollection<BrandViewModel>> GetAllBrands()
+		public async Task<ICollection<BrandGridListViewModel>> GridList()
 		{
-			var brands = await _brandRepository.ListAll();
+			var brands = await _brandRepository.GridList();
 
 			return brands.Any()
-				? _mapper.Map<ICollection<BrandViewModel>>(brands)
-				: new List<BrandViewModel>();
+				? _mapper.Map<ICollection<BrandGridListViewModel>>(brands)
+				: new List<BrandGridListViewModel>();
 		}
 
 		public async Task<BrandViewModel?> GetById(Guid id)

@@ -32,8 +32,8 @@ namespace SL.VehicleMaintenance.Infrastructure.Data.Repositories
             return obj;
         }
 
-        public async Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate)
-			=> await DbSet.AsNoTracking().Where(predicate).ToListAsync();
+        // public async Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate)
+		// 	=> await DbSet.AsNoTracking().Where(predicate).ToListAsync();
 
 		public async Task<bool> AnyAsync(Expression<Func<TEntity, bool>> predicate)
 			=> await DbSet.AsNoTracking().AnyAsync(predicate);
@@ -48,10 +48,10 @@ namespace SL.VehicleMaintenance.Infrastructure.Data.Repositories
         //         .OrderBy(predicate.Descending, predicate.Ordenacao)
         //         .ToListAsync();
 
-        public virtual async Task<TEntity?> GetById(Guid id) => await DbSet.FindAsync(id);
+        private async Task<TEntity?> GetById(Guid id) => await DbSet.FindAsync(id);
 
-        public virtual async Task<IEnumerable<TEntity>> ListAll()
-		=> await DbSet.ToListAsync();
+        // public virtual async Task<IEnumerable<TEntity>> ListAll()
+		// => await DbSet.ToListAsync();
 
         public virtual async Task Remove(Guid id)
         {

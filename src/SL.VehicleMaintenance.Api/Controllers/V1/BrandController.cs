@@ -16,9 +16,9 @@ namespace SL.VehicleMaintenance.Api.Controllers.V1
 			_brandAppService = brandAppService;
 		}
 
-		[HttpGet("get-all")]
-		public async Task<IActionResult> GetAll()
-			=> Ok(await _brandAppService.GetAllBrands());
+		[HttpGet("grid-list")]
+		public async Task<IActionResult> GridList()
+			=> Ok(await _brandAppService.GridList());
 
 		[HttpGet("get-by-id")]
 		public async Task<IActionResult> GetById(Guid id)
