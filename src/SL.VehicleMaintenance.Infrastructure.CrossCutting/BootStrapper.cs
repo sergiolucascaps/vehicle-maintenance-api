@@ -22,16 +22,19 @@ namespace SL.VehicleMaintenance.Infrastructure.CrossCutting
 		private static void RegisterAppServices(IServiceCollection services)
 		{
 			services.AddScoped<IBrandAppService, BrandAppService>();
+			services.AddScoped<IUserAppService, UserAppService>();
 		}
 
 		private static void RegisterDomainServices(IServiceCollection services)
 		{
 			services.AddScoped<IBrandService, BrandService>();
+			services.AddScoped<IUserService, UserService>();
 		}
 
 		private static void RegisterRepositories(IServiceCollection services)
 		{
 			services.AddScoped<IBrandRepository, BrandRepository>();
+			services.AddScoped<IUserRepository, UserRepository>();
 		}
 
 		public static void RegisterAppDbContext(this IServiceCollection services, string? connection)
