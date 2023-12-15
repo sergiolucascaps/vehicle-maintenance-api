@@ -8,5 +8,8 @@ namespace SL.VehicleMaintenance.Application.ViewModels
 		public Guid ModelId { get; set; }
 		public Guid UserId { get; set; }
 		public required VehicleModelViewModel Model { get; set; }
+
+		public UserVehicleViewModel()
+		{ }
     }
 }

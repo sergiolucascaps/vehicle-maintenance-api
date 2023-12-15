@@ -8,7 +8,7 @@ namespace SL.VehicleMaintenance.Application.ViewModels
 		public ICollection<EmailViewModel> Emails { get; set; }
 		public ICollection<UserVehicleViewModel> Vehicles { get; set; }
 
-		protected UserViewModel() 
+		public UserViewModel() 
 		{
 			Phones = new List<PhoneViewModel>();
 			Emails = new List<EmailViewModel>();

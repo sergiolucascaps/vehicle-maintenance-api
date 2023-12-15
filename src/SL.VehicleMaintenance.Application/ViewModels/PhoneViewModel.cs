@@ -10,5 +10,8 @@ namespace SL.VehicleMaintenance.Application.ViewModels
 		public bool IsMain { get; set; }
 
 		public Guid UserId { get; set; }
+
+		public PhoneViewModel()
+		{ }
     }
 }

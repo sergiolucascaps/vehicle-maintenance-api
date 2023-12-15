@@ -7,5 +7,8 @@ namespace SL.VehicleMaintenance.Application.ViewModels
 		public int ModelYear { get; set; } // Ano do modelo
 		public Guid BrandId { get; set; }
 		public required BrandViewModel Brand { get; set; }
+
+		public VehicleModelViewModel()
+		{ }
     }
 }
